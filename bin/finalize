@@ -24,6 +24,8 @@ require 'java_buildpack/buildpack'
 
 app_dir = ARGV[0]
 
-puts "------------------------app_dir value:#{app_dir}"
+puts "========================================================================"
+puts "app_dir value:#{app_dir}"
+puts "========================================================================"
 
 JavaBuildpack::Buildpack.with_buildpack(app_dir, 'Finalize failed with exception %s', &:compile)
